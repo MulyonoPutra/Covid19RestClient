@@ -14,8 +14,7 @@ public class RestClientService {
 
     // GET User with return String User
     public ResponseEntity<String> getUser(int id){
-        ResponseEntity<String> response = restTemplate.getForEntity("https://jsonplaceholder.typicode.com/users/" + id, String.class);
-        return response;
+        return restTemplate.getForEntity("https://jsonplaceholder.typicode.com/users/" + id, String.class);
     }
 
     // GET User with return Object User
@@ -25,8 +24,7 @@ public class RestClientService {
     }
 
     public ResponseEntity<User[]> getAllUser(){
-        ResponseEntity<User[]> response = restTemplate.getForEntity("https://jsonplaceholder.typicode.com/users", User[].class);
-        return response;
+        return restTemplate.getForEntity("https://jsonplaceholder.typicode.com/users", User[].class);
     }
 
     public ResponseEntity<User> createUser(User user){
